@@ -1,0 +1,53 @@
+#include <iostream>
+#include <string>
+using namespace std;
+class Dog{
+public:
+string name="jeko";
+string color="gray";
+int age=5;
+void info_dog(Dog a){
+    cout<<"имя->"<<Dog::name<<"\n"<<"цвет->"<<Dog::color<<"\n"<<"возраст->"<<Dog::age<<endl;
+}
+};
+class Cat{
+public:
+    string name="sonya";
+    string color="black";
+    int age=8;
+    void info_cat(Cat a){
+        cout<<"имя->"<<Cat::name<<"\n"<<"цвет->"<<Cat::color<<"\n"<<"возраст->"<<Cat::age<<endl;
+    }
+};
+class Lion{
+public:
+    string name="alex";
+    string color="yellow";
+    int age=10;
+    void info_lion(Lion a){
+        cout<<"имя->"<<Lion::name<<"\n"<<"цвет->"<<Lion::color<<"\n"<<"возраст->"<<Lion::age<<endl;
+    }
+};
+class Zebra{
+public:
+    string name="marti";
+    string color="striped";
+    int age=9;
+    void info_zebra(Zebra a){
+        cout<<"имя->"<<Zebra::name<<"\n"<<"цвет->"<<Zebra::color<<"\n"<<"возраст->"<<Zebra::age<<endl;
+    }
+};
+void info_animals(Dog a,Cat b,Lion c,Zebra d){
+    a.info_dog(a);
+    b.info_cat(b);
+    c.info_lion(c);
+    d.info_zebra(d);
+}
+int main() {
+   Dog a;
+   Cat b;
+   Lion c;
+   Zebra d;
+   info_animals(a,b,c,d);
+    return 0;
+}
